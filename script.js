@@ -48,6 +48,9 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+/* Plays five rounds of the game, keeping score and 
+announcing a winner after five games */
+
 function game(){
     let player = 0;
     let computer = 0;
