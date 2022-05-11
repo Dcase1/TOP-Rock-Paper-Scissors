@@ -30,25 +30,54 @@ computerSelection to determine returned outcome */
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === "Rock" && computerSelection === "Scissors"){
-        return "You win! Rock beats Scissors!";
+        return result = "You win! Rock beats Scissors!";
     } else if (playerSelection === "Paper" && computerSelection === "Rock"){
-        return "You win! Paper beats Rock!";
+        return result = "You win! Paper beats Rock!";
     } else if (playerSelection === "Scissors" && computerSelection === "Paper"){
-        return "You win! Scissors beats Paper!";
+        return result = "You win! Scissors beats Paper!";
     } else if (playerSelection === "Rock" && computerSelection === "Paper"){
-        return "You lose! Paper beats Rock!";
+        return result = "You lose! Paper beats Rock!";
     } else if (playerSelection === "Paper" && computerSelection === "Scissors"){
-        return "You lose! Scissors beats Paper!";
+        return result = "You lose! Scissors beats Paper!";
     } else if (playerSelection === "Scissors" && computerSelection === "Rock"){
-        return "You lose! Rock beats Scissors!";
+        return result = "You lose! Rock beats Scissors!";
     } else if (playerSelection === computerSelection){
-        return "Tie!"
+        return result = "Tie!"
     } else {
-        return "Please select rock, paper, or scissors!"
+        return result = "Please select rock, paper, or scissors!"
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+function game(){
+    let player = 0;
+    let computer = 0;
+
+    for (let i = 0; i < 5; i++){
+        playRound(playerSelection, computerPlay());
+        if (result.includes("win")){
+            player++;
+        } else if (result.includes("lose")){
+            computer++;
+        }
+
+        console.log(result);
+    };
+
+    if (player > computer){
+        return `You win the game, ${player} to ${computer}!`;
+    } else if (computer > player){
+        return `You lose the game, ${player} to ${computer}`;
+    } else if (player === computer){
+        return `Tie game, ${player} to ${computer}!`;
+    }
+
+    
+    
+}
+
+console.log(game());
+
+
 
 
 
